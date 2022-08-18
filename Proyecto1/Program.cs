@@ -12,12 +12,12 @@ static void metodoLinealCongruencial(double Xo, double m,
     // Inicialzar con el valor semilla
     randomNums[0] = Xo;
  
-    // interacion para todos los numeros requeridos
+    // doubleeracion para todos los numeros requeridos
     for(int i = 1; i < noOfRandomNums; i++)
     {
          
         // seguir el metodo lineal congruencial
-        randomNums[i] = (((randomNums[i - 1] * a) + c) % m) / ((randomNums[i - 1] * a) + c);
+        randomNums[i] = (((randomNums[i - 1] * a) + c) % m);
     }
 }
  
@@ -26,16 +26,16 @@ public static void Main(String[] args)
 {
      
     // Semilla
-    double Xo = 6.0000;
+    double Xo = 6;
      
     // Modulus
-    double m = 80.0000;
+    double m = 80;
      
     // Multiplicador
-    double a = 32.0000;
+    double a = 32;
      
     // Incremento
-    double c = 3.0000;
+    double c = 3;
      
     // Numero de numeros random
     // a generar
