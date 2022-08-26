@@ -1,19 +1,11 @@
-import matplotlib.pyplot as plt
-  
-names = []
-marks = []
-  
-f = open('sample.txt','r')
-for row in f:
-    row = row.split(' ')
-    names.append(row[0])
-    marks.append(int(row[1]))
-  
-plt.bar(names, marks, color = 'g', label = 'File Data')
-  
-plt.xlabel('Student Names', fontsize = 12)
-plt.ylabel('Marks', fontsize = 12)
-  
-plt.title('Students Marks', fontsize = 20)
-plt.legend()
-plt.show()
+from collections import Counter
+with open('data01.txt', 'r') as fd:
+    lines = fd.read().split()
+    counter = Counter(lines)
+    # sorts items
+    items = sorted(counter.items(), key=lambda x: float(x[0]))
+    # prints desired output
+    total = len(items)
+    print(total)
+    for k in items:
+        print (k[0])
