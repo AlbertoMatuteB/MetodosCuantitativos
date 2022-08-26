@@ -52,7 +52,7 @@ public static void Main(String[] args)
     // imprimir los numeros generados
     for(int i = 0; i < noOfRandomNums; i++)
     {
-        Console.Write(randomNums[i] + " ");
+        Console.Write(randomNums[i] / m + " ");
     }
 }
 }
